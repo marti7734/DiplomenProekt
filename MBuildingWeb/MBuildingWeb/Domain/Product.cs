@@ -22,8 +22,9 @@ namespace MBuildingWeb.Domain
         [Required]
         [Range(0, 5000)]
         public int Quantity { get; set; }
-        
+        [Range (0,10000)]
         public decimal Price { get; set; }
+        [Range(0,100)]
         public decimal Discount { get; set; }
         public string Description { get; set; }
         public virtual IEnumerable<Order> Orders { get; set; } = new List<Order>();
