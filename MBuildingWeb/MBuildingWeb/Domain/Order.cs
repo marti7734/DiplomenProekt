@@ -21,7 +21,9 @@ namespace MBuildingWeb.Domain
         public virtual ApplicationUser User { get; set; }
         [Required]
         public int Quantity { get; set; }
+        [Range (0,1000)]
         public decimal Price { get; set; }
+        [Range (0,100)]
         public decimal Discount { get; set; }
         public decimal TotalPrice
         {
